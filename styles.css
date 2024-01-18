@@ -1,0 +1,438 @@
+/* styles.css */
+
+/* Estilos para el encabezado */
+header {
+    background-color: #fff; /* Cambiar el fondo del encabezado a blanco */
+    display: flex; /* Usar flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Distribuir los elementos a ambos lados del header */
+    align-items: center; /* Centrar verticalmente los elementos en el header */
+    padding: 10px; /* Agregar un poco de espacio alrededor de los elementos dentro del header */
+    color: #333; /* Cambiar el color del texto a un tono oscuro */
+}
+
+header img {
+    max-width: 17%; /* Ajustar el tamaño máximo de la imagen del logotipo al 100% */
+    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+}
+
+header ul {
+    list-style: none; /* Quitar las viñetas de la lista */
+    margin: 0; /* Quitar el margen exterior de la lista */
+    padding: 0; /* Quitar el espacio interior de la lista */
+    display: flex; /* Usar flexbox para alinear los elementos de la lista horizontalmente */
+}
+
+header li {
+    margin-right: 50px; /* Agregar espacio entre los elementos de la lista */
+    width: max-content;
+}
+ul li a {
+    color: slategrey;
+    text-decoration: none; /* Eliminar subrayado en los enlaces (si es necesario) */
+    /* Puedes agregar otros estilos de texto según tus preferencias */
+}
+
+@media (max-width: 768px) {
+    header ul{
+        display: none; /* Oculta el encabezado en dispositivos móviles */
+    }
+
+    .logo {
+        text-align: center; /* Centra el logotipo en dispositivos móviles */
+    }
+
+    .logo img {
+        max-width: 25%; /* Ajusta el tamaño máximo del logotipo en dispositivos móviles */
+    }
+}
+
+/* Estilos para la sección con la imagen de fondo */
+.hero-section {
+    text-align: center;
+    padding: 150px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Estilo para la imagen de fondo */
+.background-image {
+    background-image: url('images/soporte.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9; /* Puedes ajustar la opacidad según tus preferencias */
+}
+
+/* Estilo para el contenido */
+.content {
+    position: relative; /* Coloca el contenido sobre la imagen de fondo */
+    z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
+}
+
+/* Capa semi-transparente con filtro negro */
+.background-image::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6); /* Cambia el valor alfa (0.3) según tus preferencias */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Coloca la capa detrás de la imagen de fondo */
+}
+
+/* Estilos para el texto en la sección hero */
+.content h1 {
+    font-size: 55px; /* Ajusta el tamaño de la fuente para el título según tus preferencias */
+}
+
+.content p {
+    font-size: 20px; /* Ajusta el tamaño de la fuente para el párrafo según tus preferencias */
+}
+
+/* Estilo para el botón */
+.contact-button {
+    font-size: 18px; /* Ajusta el tamaño de la fuente para el botón según tus preferencias */
+    /* Otros estilos del botón */
+}
+
+.hero-text {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de contacto */
+.contact-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #fff; /* Agregar un borde blanco de 2 píxeles */
+}
+
+/* Estilos para la sección de dos columnas */
+.two-column-section {
+    background-color: #1867a1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+}
+
+.two-column-section2 {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+}
+
+.two-column-section3 {
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.column-left {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    color:#fff;
+}
+
+.column-left h2{
+    text-align: center;
+    font-size: 26px;
+}
+
+.column-left p{
+    font-size: 18px;
+}
+
+/* Estilos para la columna izquierda */
+.column-left2 {
+    flex: 1;
+    padding: 30px;
+    text-align: left;
+    color: slategrey;
+}
+
+.column-left2 h2 {
+    font-size: 26px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.column-left2 ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+.column-left2 ul li {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.column-right {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido verticalmente en la columna derecha */
+}
+
+.column-right img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al 100% del ancho de la columna */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    border-radius: 8px;
+}
+
+/* Estilos para la columna derecha */
+.column-right2 {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+}
+
+.column-right2 img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al 100% del ancho de la columna */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    display: block; /* Centra horizontalmente la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 8px;
+}
+
+/* Estilos para la cuadrícula de imágenes en dispositivos móviles (ancho de pantalla <= 768px) */
+@media (max-width: 768px) {
+    .two-column-section {
+        flex-direction: column; /* Cambia la dirección de la flexbox a columna */
+    }
+
+    .two-column-section2 {
+        flex-direction: column; /* Cambia la dirección de la flexbox a columna */
+    }
+
+    .two-column-section3 {
+        flex-direction: column; /* Cambia la dirección de la flexbox a columna */
+    }
+
+    .column-left2,
+    .column-right2 {
+        flex: 1; /* Ambas columnas ocupan el ancho completo en dispositivos móviles */
+        padding: 40px; /* Espaciado interior para ambas columnas */
+        text-align: justify; /* Texto justificado para ambas columnas */
+        text-align: center; /* Centra el contenido en dispositivos móviles */
+    }
+
+    .column-left2 ul li {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+
+/* Estilos para la nueva sección */
+.blue-section {
+    color: slategrey;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Estilos para el contenido dentro de la nueva sección */
+.blue-content {
+    max-width: 90%; /* Limita el ancho del contenido para que no sea demasiado ancho */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+.blue-content h2 {
+    font-size: 37px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+}
+
+.blue-content p {
+    font-size: 18px; /* Tamaño del párrafo */
+}
+
+/* Estilos para la cuadrícula de imágenes */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px; /* Agregar margen negativo para crear espacio entre las imágenes */
+}
+
+/* Estilos para la cuadrícula de imágenes en dispositivos móviles (ancho de pantalla <= 768px) */
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column; /* Cambia la dirección de la flexbox a columna */
+    }
+
+    .image-box {
+        flex-basis: 100%; /* Hace que cada imagen ocupe el ancho completo */
+        margin-bottom: 20px; /* Espacio entre las imágenes */
+        padding: 10px; /* Espacio dentro de cada imagen */
+    }
+}
+
+.image-box {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding: 10px; /* Agregar espacio entre las imágenes */
+}
+
+/* Estilo para la imagen */
+.image-box img {
+    max-width: 100%; /* Ajustar el tamaño máximo al ancho de la columna */
+    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+    width: 100%; /* Hacer que la imagen ocupe el 100% del ancho disponible */
+    transition: transform 0.3s;
+    border-radius: 8px; /* Agregar bordes redondeados a las imágenes */
+}
+
+/* Estilo para el filtro oscuro */
+.image-box img::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Estilo para resaltar la imagen al pasar el mouse */
+.image-box:hover img::before {
+    opacity: 1;
+}
+
+.image-box:hover img {
+    transform: scale(1.05);
+}
+
+.image-box h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: slategrey;
+}
+
+.image-box p {
+    font-size: 18px;
+    color: slategrey;
+}
+
+/* Estilos para la nueva sección */
+.proud-section {
+    background-color: #1867a1; /* Cambia el color de fondo según tus preferencias */
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Estilos para el contenido dentro de la nueva sección */
+.proud-content {
+    max-width: 800px; /* Limita el ancho del contenido para que no sea demasiado ancho */
+    margin: 30px auto; /* Centra el contenido horizontalmente */
+}
+
+.proud-content h2 {
+    font-size: 37px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+    color: #fff;
+}
+
+.proud-content p {
+    font-size: 18px; /* Tamaño del párrafo */
+    color: #fff;
+}
+
+/* Estilos para la sección de "Nuestros Clientes" */
+.client-section {
+    text-align: center;
+    background-color: #1867a1; /* Cambia el color de fondo según tus preferencias */
+    padding: 50px 0;
+}
+
+.client-section h2 {
+    font-size: 37px; /* Tamaño del título */
+    margin-bottom: 35px; /* Espacio entre el título y las imágenes */
+    color: #fff; /* Cambia el color del texto a un tono oscuro */
+}
+
+.client-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.client-images img {
+    max-width: 12%; /* Ajustar el tamaño máximo de las imágenes al 16% del ancho de la sección */
+    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+    margin: 5px; /* Espacio entre las imágenes */
+}
+
+/* Estilos para la sección con fondo negro */
+.black-section {
+    background-color:#333; /* Cambiar el color de fondo a negro */
+    color: #fff; /* Cambiar el color del texto a blanco */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos para las columnas en la sección */
+.two-column-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.column-left3 {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.column-right3 {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el título */
+.column-left3 h2 {
+    font-size: 28px; /* Tamaño del título */
+}
+
+/* Estilos para el mapa de Google */
+.column-right3 iframe {
+    max-width: 100%;
+    height: 500px; /* Ajusta la altura del mapa según tus preferencias */
+    border-radius: 8px;
+}
+
+.image-container {
+display: inline-block; /* Alinea el contenedor como un bloque en línea */
+padding: 10px; /* Espaciado interior para separar la imagen del borde negro */
+}
+
+
+/* Estilos generales */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
